@@ -63,9 +63,6 @@ jobs:
     needs: check-version
     if: ${{ needs.check-version.outputs.should_build }}
     runs-on: ${{ matrix.os }}
-    strategy:
-       matrix:
-         os: [windows-latest, ubuntu-latest, macOS-latest]
        fail-fast: false
     steps:
       - name: (Windows) Install dependencies
